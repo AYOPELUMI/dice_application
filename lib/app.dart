@@ -7,6 +7,7 @@ class DiceApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       home: DicePage(),
     );
   }
@@ -32,13 +33,13 @@ class DicePage extends StatelessWidget {
                 return Image.asset('assets/${diceController.diceNumber.value}.png');
               }
             }),
-            SizedBox(height: 40),
+            SizedBox(height: 20),
             ElevatedButton(
               onPressed: diceController.rollDice,
               style: ButtonStyle(
                 backgroundColor: WidgetStateProperty.all<Color>(Color(0xFFFAB82920)),
               ),
-              child: Text('Roll Dice', style: TextStyle(color : Colors.white)),
+              child: Text('Roll Dice',style: TextStyle(color: Colors.white, fontSize:15)),
             ),
           ],
         ),
