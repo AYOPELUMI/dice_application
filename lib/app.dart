@@ -29,13 +29,16 @@ class DicePage extends StatelessWidget {
               if (diceController.isLoading.value) {
                 return CircularProgressIndicator();
               } else {
-                return Image.asset('assets/dice${diceController.diceNumber}.png');
+                return Image.asset('assets/${diceController.diceNumber.value}.png');
               }
             }),
-            SizedBox(height: 20),
+            SizedBox(height: 40),
             ElevatedButton(
               onPressed: diceController.rollDice,
-              child: Text('Roll Dice'),
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all<Color>(Color(0xFFFAB82920)),
+              ),
+              child: Text('Roll Dice', style: TextStyle(color : Colors.white)),
             ),
           ],
         ),

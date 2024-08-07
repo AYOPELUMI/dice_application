@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 
@@ -24,15 +25,44 @@ class DiceController extends GetxController {
     isLoading.value = false;
 
     if (diceNumber.value == 6) {
-      Fluttertoast.showToast(msg: 'A 6 has been thrown!');
+      Fluttertoast.showToast(
+        msg: 'A 6 has been thrown!',
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.BOTTOM,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.grey,
+        textColor: Colors.white,
+        fontSize: 16.0,);
     } else if (diceNumber.value % 2 == 0) {
-      Fluttertoast.showToast(msg: 'An even number is thrown!');
+      Fluttertoast.showToast(
+        msg: 'An even number is thrown!',
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.BOTTOM,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.grey,
+        textColor: Colors.white,
+        fontSize: 16.0,);
     } else {
-      Fluttertoast.showToast(msg: 'An odd number is thrown!');
+      Fluttertoast.showToast(
+        msg: 'An odd number is thrown!',
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.BOTTOM,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.grey,
+        textColor: Colors.white,
+        fontSize: 16.0,
+      );
     }
 
     if (rollCount.value == 6) {
-      Fluttertoast.showToast(msg: 'Total rolls: ${totalRolls.value}');
+      Fluttertoast.showToast(
+        msg: 'Total rolls: ${totalRolls.value}',
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.BOTTOM,
+        timeInSecForIosWeb: 5,
+        backgroundColor: Colors.blueAccent,
+        textColor: Colors.white,
+        fontSize: 16.0,);
       rollCount.value = 0;
     }
   }
